@@ -72,6 +72,7 @@ nav.toc a{border-left:0;border:1px solid var(--line)}.cards{grid-template-column
 <a href="#amplify" data-t="amplify">優勢放大地圖</a>
 <a href="#defend" data-t="defend">劣勢防守 · 壓力測試</a>
 <a href="#legal" data-t="legal">法律 · 法遵深度解析</a>
+<a href="#patents" data-t="patents">專利地景 · 護城河與 FTO</a>
 <a href="#deputy" data-t="deputy">副手作戰手冊 · KONO</a>
 <a href="#passbook" data-t="passbook">深度解析 · 寵物健康存摺論述</a></nav>
 <main><section id="overview" class="sec"><div class="sec-eyebrow">00</div>
@@ -1896,7 +1897,358 @@ SaaS/數據合作的標準：<strong>初始一年期 + 到期自動續約（ever
 <p><strong>現階段務實該做到的最小集合</strong>:P0 三項(律師意見書、data mapping、安全維護計畫)+ P1 三項(合約鎖死禁核保、分層同意、招攬切割)+ P2 第 7、8 項(不構成診斷的 UI、錄音同意)。<strong>做到這八件,你就從「法遵一眼看穿的空話」變成「拿得出框架的可信對象」</strong>——這正是進產險試點的入場券。</p>
 <hr />
 <p><em>(本文相關來源檔案路徑:本分析整理自任務輸入的四視角 JSON;如需落地為對外文件,建議由台灣律師覆核後再定稿。)</em></p></section>
-<section id="deputy" class="sec"><div class="sec-eyebrow">10</div><h1>KONO 副手作戰手冊</h1>
+<section id="patents" class="sec"><div class="sec-eyebrow">10</div><h1>Pawtient AI 專利地景研究報告</h1>
+<blockquote>
+<p><strong>重要免責聲明:本報告不構成法律意見。</strong> 以下內容為基於公開網路檢索的初步研究與方向性分析,並非正式的前案檢索(prior-art search)或自由實施分析(freedom-to-operate, FTO)。在實際提出專利申請、或假設自己「不侵權可安全上市」之前,務必委請專利律師執行正式的前案檢索與 FTO 分析。本報告所有具體專利號、權利人均經實際查證 Google Patents 頁面確認(下方逐筆附來源 URL),未引用任何無法在來源中查證的專利號。</p>
+</blockquote>
+<hr />
+<h2>一、既有相關專利/申請(逐筆查證)</h2>
+<p>以下每筆專利號、權利人、狀態均已實際抓取 Google Patents 頁面確認。</p>
+<h3>A. 寵物健康紀錄 App 與平台 / 縱向病歷整合</h3>
+<table>
+<thead>
+<tr>
+<th>專利號</th>
+<th>權利人</th>
+<th>狀態</th>
+<th>一句話描述</th>
+<th>來源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>US11894143B2</strong></td>
+<td><strong>Whiskers Worldwide LLC</strong></td>
+<td>已核准(2024-02-06,有效至 2034)</td>
+<td>整合多來源寵物健康紀錄(獸醫 EMR、遠距醫療、穿戴裝置)做個體+群體健康評估與治療建議</td>
+<td><a href="https://patents.google.com/patent/US11894143B2/en">連結</a></td>
+</tr>
+<tr>
+<td><strong>US11621076B2</strong></td>
+<td><strong>Snout Inc / Scoutvet Inc</strong></td>
+<td>已核准(2023-04-04)</td>
+<td>用 ML 分類器把獸醫 PIMS 的自由文字自動轉成標準化臨床事件代碼(SNOMED CT / ICD)以建立寵物病歷</td>
+<td><a href="https://patents.google.com/patent/US11621076B2/en">連結</a></td>
+</tr>
+<tr>
+<td><strong>US10930401B2</strong></td>
+<td><strong>Petriage Inc</strong></td>
+<td>已核准(有效至 2040)</td>
+<td>飼主輸入症狀 → 加權症狀分析+貝氏統計 → 回傳緊急度/分診建議(AI 症狀檢查器)</td>
+<td><a href="https://patents.google.com/patent/US10930401B2/en">連結</a></td>
+</tr>
+<tr>
+<td>US20210125152A1</td>
+<td>Figo Pet Insurance LLC</td>
+<td><strong>已放棄</strong></td>
+<td>用相機拍攝寵物病歷 → 自動填入預約行事曆</td>
+<td><a href="https://patents.google.com/patent/US20210125152A1/en">連結</a></td>
+</tr>
+<tr>
+<td>WO2016005911A1</td>
+<td><strong>Nestec SA(Nestlé)</strong></td>
+<td>已終止</td>
+<td>收集/分析動物資料做個人化營養與健康建議</td>
+<td><a href="https://patents.google.com/patent/WO2016005911A1/en">連結</a></td>
+</tr>
+<tr>
+<td>CA2567557A1</td>
+<td><strong>IDEXX Laboratories</strong></td>
+<td><strong>已放棄</strong></td>
+<td>「可攜式獸醫病歷裝置及使用方法」</td>
+<td><a href="https://patents.google.com/patent/CA2567557A1/en">連結</a></td>
+</tr>
+</tbody>
+</table>
+<h3>B. OCR / 病歷檢驗報告結構化擷取(此領域以「人醫」為主)</h3>
+<table>
+<thead>
+<tr>
+<th>專利號</th>
+<th>權利人</th>
+<th>狀態</th>
+<th>一句話描述</th>
+<th>來源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>US10522246B2</strong></td>
+<td><strong>Optum Inc</strong>(UnitedHealth)</td>
+<td>已核准(2019-12-31,優先權 2015)</td>
+<td>OCR+詞序分析,只擷取<strong>檢驗報告</strong>相關段落並輸出結構化檢驗資料(<strong>最直接命中</strong>)</td>
+<td><a href="https://patents.google.com/patent/US10522246B2/en">連結</a></td>
+</tr>
+<tr>
+<td><strong>US12170133B2</strong>(公開號 US20220301670A1)</td>
+<td><strong>Roche Molecular Systems</strong></td>
+<td>已核准(2024-12-17)</td>
+<td>病理報告影像 → OCR → NLP 抽取實體(欄位+值)→ 映射到標準術語(如 SNOMED)</td>
+<td><a href="https://patents.google.com/patent/US20220301670A1/en">連結</a></td>
+</tr>
+<tr>
+<td>US11501061B2</td>
+<td><strong>IBM</strong></td>
+<td>已核准(2022)</td>
+<td>OCR+ML 從掃描的醫療表單影像擷取結構化資料</td>
+<td><a href="https://patents.google.com/patent/US11501061B2/en">連結</a></td>
+</tr>
+<tr>
+<td><strong>CN118887684A</strong></td>
+<td>浙江大學</td>
+<td><strong>申請中</strong>(2024 申請)</td>
+<td>明確結合 <strong>OCR + LLM(ChatGLM-6B)</strong> 從醫療報告影像自動抽取結構化資訊(目前最明確的「OCR+LLM」請求項)</td>
+<td><a href="https://patents.google.com/patent/CN118887684A/en">連結</a></td>
+</tr>
+<tr>
+<td>US9785830B2</td>
+<td>Lexmark International</td>
+<td>已核准</td>
+<td>從 OCR 文件擷取<strong>表格</strong>資料、指派表頭(可能成為檢驗表格解析的前案)</td>
+<td><a href="https://patents.google.com/patent/US9785830B2/en">連結</a></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>關鍵特徵:此領域<strong>幾乎全是人醫</strong>(Optum、Roche、IBM)。「拍檢驗報告 → OCR → 結構化欄位」此概念本身已是充分的前案,Optum US10522246B2 為單一最命中的已核准專利。</p>
+</blockquote>
+<h3>C. 獸醫檢驗數據分析 / 趨勢 / 參考區間 / 異常標記</h3>
+<table>
+<thead>
+<tr>
+<th>專利號</th>
+<th>權利人</th>
+<th>狀態</th>
+<th>一句話描述</th>
+<th>來源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>US8585590B2</strong></td>
+<td><strong>IDEXX Laboratories</strong></td>
+<td>已核准(2013,有效至約 2030)</td>
+<td><strong>同列顯示當前+歷史檢驗值、參考區間欄、並繪製跨時間趨勢折線圖</strong>(與你的「跨次趨勢線」核心高度重疊)</td>
+<td><a href="https://patents.google.com/patent/US8585590B2/en">連結</a></td>
+</tr>
+<tr>
+<td><strong>US11551789B2</strong></td>
+<td><strong>IDEXX Laboratories</strong></td>
+<td>已核准(2023,US8585590 之延續案)</td>
+<td>在上案基礎上加入<strong>顏色編碼異常標記</strong>(超出參考區間以不同顏色顯示)+趨勢圖+參考區間</td>
+<td><a href="https://patents.google.com/patent/US11551789B2/en">連結</a></td>
+</tr>
+<tr>
+<td><strong>US9091684B2</strong></td>
+<td><strong>IDEXX Laboratories</strong></td>
+<td>已核准(2015)</td>
+<td>SDMA 腎臟指標檢測,明確記載<strong>物種專屬參考區間</strong>(犬/貓/人各自數值)</td>
+<td><a href="https://patents.google.com/patent/US9091684B2/en">連結</a></td>
+</tr>
+<tr>
+<td>US8645306B2</td>
+<td><strong>IDEXX Laboratories</strong></td>
+<td>已核准(2014)</td>
+<td>診斷分析儀自動校正,使用<strong>物種專屬</strong>(犬/貓/馬)目標值與移動平均比較</td>
+<td><a href="https://patents.google.com/patent/US8645306B2/en">連結</a></td>
+</tr>
+<tr>
+<td>US12451248B2</td>
+<td><strong>UC San Diego</strong></td>
+<td>已核准(2025)</td>
+<td>用 ML 從 CBC+血清生化參數診斷犬愛迪生氏病;以參數比值「<strong>繞過對參考區間的依賴</strong>」</td>
+<td><a href="https://patents.google.com/patent/US12451248B2/en">連結</a></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>IDEXX 的 <strong>US8585590B2 + US11551789B2</strong> 是「獸醫縱向檢驗趨勢+參考區間+異常標記」最直接的前案,且為<strong>有效中</strong>的專利,屬於 FTO 上需要特別注意的對象。</p>
+</blockquote>
+<h3>D. 看診錄音 → 轉錄 → 結構化臨床紀錄(全部為人醫)</h3>
+<table>
+<thead>
+<tr>
+<th>專利號</th>
+<th>權利人</th>
+<th>狀態</th>
+<th>一句話描述</th>
+<th>來源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>US12224073B2</strong></td>
+<td><strong>Microsoft</strong>(原 Nuance)</td>
+<td>已核准(2025)</td>
+<td>擷取就診音訊(麥克風陣列/波束成形)→ 轉錄 → 自動填入病歷 + 即時 AI 洞察(DAX 環境式文件家族)</td>
+<td><a href="https://patents.google.com/patent/US12224073B2/en">連結</a></td>
+</tr>
+<tr>
+<td><strong>US11515020B2</strong>(公開 US20190272906A1)</td>
+<td><strong>Nuance → Microsoft</strong></td>
+<td>已核准(2022)</td>
+<td>擷取就診音訊 → 產生逐字稿 → 隨就診進行逐步建立醫療報告</td>
+<td><a href="https://patents.google.com/patent/US20190272906A1/en">連結</a></td>
+</tr>
+<tr>
+<td><strong>US11894140B2</strong></td>
+<td><strong>Google LLC</strong></td>
+<td>已核准(2024)</td>
+<td>醫病對話語音轉文字 + NER 擷取臨床重點詞 → 結構化筆記與即時逐字稿並列</td>
+<td><a href="https://patents.google.com/patent/US11894140B2/en">連結</a></td>
+</tr>
+</tbody>
+</table>
+<h3>E. 寵物保險 + 健康資料 / 理賠自動化</h3>
+<table>
+<thead>
+<tr>
+<th>專利號</th>
+<th>權利人</th>
+<th>狀態</th>
+<th>一句話描述</th>
+<th>來源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>US10013530B2</strong>(及同族 US10255993B2 / US10891590B2 / US10909501B2 / US12014329B2)</td>
+<td><strong>Trupanion Inc</strong></td>
+<td>多件已核准(優先權 2013)</td>
+<td>雲端平台串接獸醫 PIMS,在診間 POS 即時投保+理賠核定、直接付款給診所(Trupanion Express);<strong>曾以 '530/'993 對 Embrace 提告</strong></td>
+<td><a href="https://patents.google.com/patent/US10013530B2/en">連結</a></td>
+</tr>
+<tr>
+<td><strong>US8762179B2</strong></td>
+<td><strong>Pets Best Insurance Services LLC</strong></td>
+<td>已核准但<strong>已到期</strong>(優先權 <strong>1999</strong>)</td>
+<td>自動化寵物保險核保+理賠:依健康狀況標記為可接受/排除/人工審查,並比對既往症與等待期(最古老、最廣的基礎前案;到期=可自由使用之前案)</td>
+<td><a href="https://patents.google.com/patent/US8762179B2/en">連結</a></td>
+</tr>
+<tr>
+<td>US10762574B2 / US11508013B2 / US12106378B2</td>
+<td><strong>Adubb LLC / A. Dubbaneh</strong>(個人)</td>
+<td>已核准(優先權 2015)</td>
+<td>以手機 App+穿戴裝置(活動/心率/體溫)+<strong>OCR 匯入獸醫紀錄</strong>做動態保費核保與調整</td>
+<td><a href="https://patents.google.com/patent/US10762574B2/en">連結</a></td>
+</tr>
+<tr>
+<td>US7853459B2</td>
+<td><strong>QTC Management Inc</strong></td>
+<td>已核准(2010)</td>
+<td>自動從電子病歷定位可理賠病況之證據(關鍵字+推論規則)以支持保險判定(非寵物專屬,但機制可讀到「獸醫紀錄→理賠證據」)</td>
+<td><a href="https://patents.google.com/patent/US7853459B2/en">連結</a></td>
+</tr>
+</tbody>
+</table>
+<h3>F. 找不到具體專利之領域(誠實說明)</h3>
+<ul>
+<li><strong>IDEXX / Zoetis / Mars(Banfield/VCA/Antech)的「軟體/資料平台」專利:基本查無。</strong> IDEXX 可查到的是<strong>診斷化學/硬體</strong>與上述趨勢顯示家族;VetConnect PLUS、Neo PIMS、DecisionIQ 等軟體<strong>未見對應專利</strong>(推測以營業秘密/著作權保護)。Zoetis 可查到的全是<strong>藥品/生物製劑</strong>(如 Cytopoint/IL-31 抗體),未見診斷軟體專利。Mars/Antech/VCA 作為權利人<strong>查無</strong>寵物病歷平台專利。</li>
+<li><strong>獸醫專屬的「拍照/OCR → 檢驗值結構化」專利:真正的空白。</strong> 找不到任何已核准專利請求「獸醫檢驗報告影像 → OCR → 結構化檢驗參數」。獸醫端的相關專利(Scoutvet US11621076B2)是<strong>文字輸入</strong>做事件編碼,不是影像/OCR 檢驗值解析。</li>
+<li><strong>獸醫看診錄音→結構化(vet AI scribe)專利:查無。</strong> 所有環境式文件專利皆人醫(Nuance/Microsoft、Google)。商業產品很多(Scribenote、CoVet、ScribVet、VetGeni、PetDesk Scribe 等)但屬產品階段、未見核准專利 → <strong>明顯白地</strong>。</li>
+<li><strong>品種專屬(breed-specific)參考區間:查無專利。</strong> 文獻普遍認為品種別區間「不切實際且成本高」,已專利的粒度停在<strong>物種別</strong>(IDEXX SDMA/校正);品種別看似開放領域。</li>
+<li><strong>Nationwide pet / Lemonade pet / Embrace / Petplan / Fetch:查無理賠自動化或核保專利。</strong> Lemonade 的「AI Jim」高度曝光但看似以營業秘密實作、未專利化。</li>
+<li><strong>NLP Logix:</strong> 新聞稿宣稱有 4 件文件影像擷取的美國專利(醫療領域),但<strong>未揭露專利號</strong> → 需以權利人在 USPTO 直接檢索才能確認。</li>
+</ul>
+<hr />
+<h2>二、專利密集區(FTO 風險)vs 相對空白(白地)</h2>
+<h3>專利密集 / FTO 風險高</h3>
+<ol>
+<li><strong>診間 POS 理賠核定 × 串接獸醫 PIMS</strong> —— <strong>Trupanion 家族</strong>主導且<strong>有效中</strong>(2013 優先權,約 2034 到期),且有實際興訟紀錄。若 Pawtient AI 要做「在診所即時提交/核定理賠並直接付款」,這是最需 FTO 的區塊。</li>
+<li><strong>獸醫縱向檢驗趨勢 + 參考區間 + 異常顏色標記</strong> —— <strong>IDEXX US8585590 / US11551789</strong> 有效中,與你的「64 參數跨次趨勢線 + 異常標記」介面概念重疊度高。請特別注意請求項範圍。</li>
+<li><strong>人醫 OCR→結構化檢驗資料</strong> —— Optum、Roche、IBM 等已核准專利密集(雖然多為人醫,但若請求項未限縮於「人類」,在 FTO 上仍須評估其文義/均等範圍)。</li>
+<li><strong>人醫看診錄音→結構化病歷</strong> —— Microsoft/Nuance(DAX)、Google 家族龐大且活躍。你的「visit mode 錄音→結構化」若擴及人醫或請求項未限於獸醫,風險升高。</li>
+</ol>
+<h3>相對空白 / 白地(對新創較有利)</h3>
+<ol>
+<li><strong>獸醫專屬「拍照→OCR/LLM→檢驗值結構化」</strong> —— 未見對應核准專利,是你的<strong>核心管線最接近白地</strong>之處(但見第三節:白地不等於可專利)。</li>
+<li><strong>獸醫看診錄音 → 結構化臨床摘要 + 異常溯源(grounding)</strong> —— 全部前案皆人醫,獸醫端是產品而非專利階段 → <strong>白地</strong>,且(見下)在可專利性上也相對較強。</li>
+<li><strong>以「獸醫檢驗/病歷資料」作為理賠/核保證據之 AI 自動判定</strong>(相對於僅看發票)—— 寵物利基內<strong>大多未專利化</strong>;相關前案是泛用 insurtech(QTC 等),這是<strong>最開放的車道</strong>。</li>
+<li><strong>品種專屬參考區間映射</strong> —— 看似開放,但可專利性偏弱(見下)。</li>
+</ol>
+<hr />
+<h2>三、「拍單→OCR/LLM 結構化→趨勢線」在 Alice/§101 下可不可能拿到有意義專利?</h2>
+<blockquote>
+<p>以下為<strong>方向性、非法律意見</strong>之分析,依美國現行判例與 USPTO 指引推估,實際結果高度取決於請求項撰寫與前案。</p>
+</blockquote>
+<h3>通用整條管線:可專利性「差」</h3>
+<p>把「拍文件 → OCR → LLM 結構化 → 趨勢/標記」當成一條<strong>通用管線</strong>去請求,幾乎是三個致命判例疊加:</p>
+<ul>
+<li><strong>Content Extraction &amp; Transmission v. Wells Fargo, 776 F.3d 1343 (Fed. Cir. 2014)</strong> —— 直接針對「掃描器擷取文件 → OCR 辨識特定資訊 → 存入記憶體」,判定為<strong>抽象概念</strong>(蒐集資料、辨識其中特定資料、儲存),用通用掃描器/電腦執行「人類向來在做的事」不具發明概念。<strong>這是對你整條管線最致命的前案。</strong> <a href="https://bitlaw.com/source/cases/patent/Content-Extraction.html">來源</a></li>
+<li><strong>Electric Power Group v. Alstom, 830 F.3d 1350 (Fed. Cir. 2016)</strong> —— 「蒐集資訊→分析→顯示結果」本身抽象,用現成電腦/顯示技術不足以構成發明概念。你的「分析+畫趨勢線」尾段正好落入此處。 <a href="https://www.bitlaw.com/source/cases/patent/Electric-Power.html">來源</a></li>
+<li><strong>Recentive Analytics v. Fox, 134 F.4th 1205 (Fed. Cir. 2025)</strong> —— ML 的第一案:<strong>把既有 ML 方法套用到新資料領域</strong>(而未改良 ML 技術本身)<strong>不具適格性</strong>。把通用 LLM/OCR 套到「獸醫資料」這個新領域,正中此失敗模式。 <a href="https://www.mintz.com/insights-center/viewpoints/2231/2025-05-02-recentive-analytics-v-fox-federal-circuit-provides">來源</a></li>
+</ul>
+<p>USPTO 2024 年 7 月 AI 指引(89 FR 58128,Examples 47–49)強調:沒有特殊 AI 標準;請求項要呈現「達成結果的<strong>具體方式</strong>」而非「結果本身」,且要改良<strong>技術</strong>而非改良抽象概念(更好的模型/數學<strong>不算</strong>技術改良)。 <a href="https://www.federalregister.gov/documents/2024/07/17/2024-15377/2024-guidance-update-on-patent-subject-matter-eligibility-including-on-artificial-intelligence">來源</a></p>
+<h3>六個「具體新穎方法」的方向性可專利性評估</h3>
+<table>
+<thead>
+<tr>
+<th>候選方法</th>
+<th>方向性可專利性</th>
+<th>理由(非法律意見)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>(d) 看診錄音→結構化 + 異常溯源(grounding 到來源片段)</strong></td>
+<td><strong>中(最強候選)</strong></td>
+<td>最接近<strong>適格</strong>的 AI 範例(Example 48 語音→轉錄,在請求項記載實現技術效果之步驟時適格);「把異常標記<strong>錨定到音訊/逐字稿的確切來源片段</strong>」是具體、非心智、電腦特有的操作,近似真正的技術能力。撰寫要點:請求<strong>具體的對齊/溯源機制</strong>作為對臨床文件/ASR 系統的技術改良,避免結果導向用語。</td>
+</tr>
+<tr>
+<td><strong>(f) 可稽核的資料溯源/血統(provenance/lineage)</strong></td>
+<td><strong>低~中</strong></td>
+<td>「記錄資料來源與轉換」近似資料組織/記錄保存(Content Extraction、Two-Way Media)。但若框架為<strong>技術架構</strong>問題、請求<strong>具體非通用機制</strong>(防竄改鏈結、密碼學/結構完整性方案,Finjan 式「系統原本做不到的新能力」),機率較佳。「單純記 log」則抽象。</td>
+</tr>
+<tr>
+<td><strong>(b) 臨床值信心評分 + abstain 機制</strong></td>
+<td><strong>低~中</strong></td>
+<td>信心評分屬數學;「低於門檻就 abstain」是<strong>已知 ML 技術(reject option)</strong>,§101(數學+心智判斷)與 §103(顯而易見)雙重脆弱。提升機率:仿 Example 47 Claim 3 / 49 Claim 2,把 abstain 綁到<strong>具體、非心智的下游動作</strong>(自動路由到特定人工複審佇列、從特定自動計算中排除、觸發特定重拍步驟)——承載適格性的是「動作」而非「分數」。</td>
+</tr>
+<tr>
+<td><strong>(a) 跨院所資料正規化 / 檢驗別名映射</strong></td>
+<td><strong>低~中(偏低)</strong></td>
+<td>本質是「辨識並映射等價資料」,近 Content Extraction,且是典型心智/文書工作(人工對應 ALT vs SGPT)。提升機率:請求<strong>特定非通用技術機制</strong>(具體本體解析演算法、以具體非常規組合解衝突的自動調和),框為改良互通性/資料整合<strong>技術</strong>。仍屬難關。</td>
+</tr>
+<tr>
+<td><strong>(e) 品種/物種專屬參考區間映射</strong></td>
+<td><strong>低</strong></td>
+<td>「查出此品種/物種的正常範圍並比較」是典型臨床判斷=心智流程,且近 Mayo 式自然相關性(類 Example 49 Claim 1 之不適格)。單獨主張機率低;唯有嵌入更大具體技術管線並帶<strong>特定下游動作</strong>才有望。</td>
+</tr>
+<tr>
+<td><strong>(c) 單位換算驗證/調和</strong></td>
+<td><strong>低(最弱)</strong></td>
+<td>單位換算是典型<strong>數學</strong>且可心算(mg/dL ↔ mmol/L);RecogniCorp 警告「抽象概念+數學公式」不適格。六者中 §101 最弱,且可能顯而易見。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>整體判讀(非法律意見):</strong> 整條管線層級的請求項,適格性「差」。務實的標的是<strong>狹窄、具體的技術子機制</strong>,以「對某技術的改良」撰寫——最佳兩個是 <strong>(d) 錄音→結構化+來源溯源</strong> 與 <strong>(f) 具體機制版的溯源/血統</strong>;<strong>(b) abstain+具體下游動作</strong>可為第三;<strong>(c) 單位換算</strong>與 <strong>(e) 參考區間查找</strong>最弱、不建議單獨投入。另須提醒:§101 適格只是<strong>必要非充分</strong>,還要過 §102/103 的新穎性與非顯而易見——而其中數項正是「已知技術用於新領域」,恰是 Recentive 的失敗模式。</p>
+<hr />
+<h2>四、對種子期新創:專利當護城河務實嗎?</h2>
+<p><strong>方向性結論:大致不務實——至少不能單靠專利、也不適合種子期的預算與時程。</strong> 比較務實的是 <strong>營業秘密 + 資料飛輪 + 工作流程鎖定</strong>,專利則「選擇性、防禦性」地用。</p>
+<p><strong>為什麼專利護城河不務實:</strong>
+- <strong>成本:</strong> 規費雖小,但軟體案連同律師撰寫/答辯<strong>約 US$15,000–30,000+</strong> 才到核准,§101 答辯回合會墊高(2025 起 RCE 規費上調)。 <a href="https://www.uspto.gov/learning-and-resources/fees-and-payment/uspto-fee-schedule">USPTO 費率</a>
+- <strong>時程:</strong> FY2025 首次官方審查意見約 22.6 個月,含 RCE 平均約 <strong>44 個月(3.7 年)</strong>;軟體/AI 案更常需 RCE。核准時你可能早已轉向或放大規模,而<strong>待審中的申請不可執行</strong>。 <a href="https://www.uspto.gov/dashboard/patents/pendency.html">USPTO pendency</a>
+- <strong>§101 風險:</strong> 文件/資料處理落在<strong>最高核駁的審查單位</strong>;2024 年 PTAB 維持審查官 §101 核駁達 <strong>88.6%</strong>;Recentive(2025)再收緊。 <a href="https://patentdocs.org/2025/08/25/ptab-101-appeal-stats-for-2024-the-more-things-stay-the-same-the-worse-they-remain/">PTAB 統計</a>
+- <strong>執行成本:</strong> 專利訴訟中位數約 US$2.9M,種子期負擔不起;未執行的專利嚇阻力薄弱。 <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2091210">來源</a></p>
+<p><strong>營業秘密 vs 專利:</strong> 專利給排他權(連獨立發明也擋)但須<strong>公開揭露</strong>(約 18 個月公開)且有 §101 風險;營業秘密<strong>無限期、零註冊成本</strong>,但<strong>不擋獨立發明與合法逆向工程</strong>。對 AI 而言最有價值的資產——<strong>訓練資料、清洗啟發法、擷取/標註管線、模型權重、超參數</strong>——通常<strong>更適合營業秘密</strong>(且常本就不可專利),何況雲端模型難以逆向、難偵測侵權。DTSA(18 U.S.C. §1836)提供聯邦救濟,但前提是落實「合理保護措施」(全員 NDA+IP 轉讓、存取控制)。 <a href="https://www.dbllawyers.com/trade-secret-vs-patent-for-ai-and-machine-learning/">來源</a>、<a href="https://www.wilmerhale.com/en/insights/client-alerts/20250429-federal-circuit-opinion-on-patent-eligibility-of-machine-learning-applications-underscores-potential-value-of-trade-secrecy-to-protecting-ai-innovation">WilmerHale 論 Recentive 利於營業秘密</a></p>
+<p><strong>資料護城河:真實但常被高估。</strong> a16z「The Empty Promise of Data Moats」指出多數「資料網路效應」其實只是<strong>資料規模效應</strong>,價值會<strong>趨於飽和</strong>、資料會過時商品化。資料護城河成立的條件是:價值<strong>非飽和/即時</strong>、真正專屬、且<strong>由你自家產品工作流生成</strong>(對手拿不到的飛輪),最好疊在<strong>工作流程鎖定/轉換成本</strong>之上,而非唯一防線。 <a href="https://a16z.com/the-empty-promise-of-data-moats/">a16z</a>、<a href="https://www.nfx.com/post/truth-about-data-network-effects">NfX</a></p>
+<p><strong>標準/SEP:</strong> 對 SaaS/AI App 基本<strong>不相關</strong>(SEP/FRAND 是電信/硬體議題)。</p>
+<p><strong>建議姿態(意見):</strong>
+1. <strong>不要把公司賭在專利護城河上</strong>——文件 AI 管線的成本/時程/§101 數學對你不利。
+2. <strong>就真正的技術進展先遞 provisional</strong>(微實體約 US$65),以低成本鎖定優先權日+「patent pending」供募資,把約 US$15k+ 的正式申請決策延後 12 個月。
+3. <strong>只選擇性申請狹窄、可偵測、真有技術改良的標的</strong>——務實上最有勝算的是 <strong>(d) 錄音→結構化的來源溯源</strong> 與 <strong>(f) 具體機制版溯源/血統</strong>,以能過 Alice 的「技術改良」方式撰寫。
+4. <strong>把營業秘密當核心 IP 策略</strong>(資料、啟發法、管線、權重),落實 DTSA「合理保護措施」。
+5. <strong>把工程投資放在資料飛輪 + 工作流程鎖定</strong>(更耐久的護城河),同時清楚資料本身會飽和。
+6. <strong>務實管理防禦風險</strong>:重大上市/募資前先做 FTO;可考慮加入 LOT Network 防專利蟑螂;SEP 可忽略。</p>
+<hr />
+<h2>驗證與限制</h2>
+<ul>
+<li>本報告 8 件核心專利(US11894143B2、US8585590B2、US10522246B2、US8762179B2、US10013530B2、US11621076B2、US10930401B2、US12224073B2)的專利號、權利人、標題、狀態<strong>均已逐筆抓取 Google Patents 頁面實際查證一致</strong>,確認非杜撰。</li>
+<li>部分次要項(如 NLP Logix 專利號、US20100145720A1 與 EP3567605A1 之權利人)在來源中未能完全鎖定,已於文中標示「需進一步以權利人在 USPTO 檢索確認」。</li>
+<li>第三節六項可專利性評估、第二節密集/白地判斷,均為<strong>方向性、非法律意見</strong>之分析,非正式前案檢索或 FTO。</li>
+<li><strong>再次提醒:本報告非法律意見。正式申請或假設可自由實施前,務必由專利律師執行正式前案檢索與 FTO 分析。</strong></li>
+</ul></section>
+<section id="deputy" class="sec"><div class="sec-eyebrow">11</div><h1>KONO 副手作戰手冊</h1>
 <h2>Pawtient AI × 國泰世紀產險｜2026/06/18 試點會議</h2>
 <blockquote>
 <p>角色定位:你是 KONO,共同創辦人兼營運長。主談是 Sean(CEO)。你今天要做到「《穿著 Prada 的惡魔》裡 Emily 幫 Miranda 把一切準備好」的等級——會前備齊一切、現場讀全場補位、會後全包跟進,<strong>不搶主談風頭,但在關鍵時刻當定海神針</strong>。
@@ -2303,7 +2655,7 @@ Sean 投入在講的時候,沒有餘力觀察。所以你要<strong>邊聽邊記
 <blockquote>
 <p>守住紅線 &gt; 講贏對方。不搶風頭。讓 Sean 發光。你是定海神針。</p>
 </blockquote></section>
-<section id="passbook" class="sec"><div class="sec-eyebrow">11</div><h1>寵物健康存摺 / 標準資料層:能用自己的話講出來的版本</h1>
+<section id="passbook" class="sec"><div class="sec-eyebrow">12</div><h1>寵物健康存摺 / 標準資料層:能用自己的話講出來的版本</h1>
 <blockquote>
 <p>寫給 KONO / Sean。目的不是讓你背一句漂亮話,是讓你<strong>真的懂到能用自己的話講、能接住任何追問</strong>。
 讀完後,你應該能對著國泰的人即興 10 分鐘,而且越被問越穩,而不是被追到第二層就回到背稿。</p>
